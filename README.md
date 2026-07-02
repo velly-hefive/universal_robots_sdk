@@ -51,10 +51,10 @@ To build URCap without deploying to URSim, run this command in the terminal:
 The .urcap file can be found in the /target folder of the project folder.
 
 #### URSim
-To run URSim, run these commands in the terminal:
-```$ cd /universal_robots_sdk```
-```$ ./startURSim.sh```
-If the simulator does not work, try to refresh the link that opens on the browser, or open this [link](http://localhost:6080/vnc.html?host=localhost&port=6080) manually to start the PolyScope simulator.
+To run URSim, run these commands in the terminal:  
+```$ cd /workspaces/universal_robots_sdk```  
+```$ ./startURSim.sh```  
+Simulator will be available at (http://localhost:6080/vnc.html?host=localhost&port=6080).
 
 
 

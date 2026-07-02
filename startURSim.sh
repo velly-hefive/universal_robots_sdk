@@ -1,12 +1,9 @@
 #!/bin/bash
-{
-xdg-open 'http://localhost:6080/vnc.html?host=localhost&port=6080'
-}&
-{
-cd /ursim 
-./start-ursim.sh 
-}&
-{
-    cd /
-    ./entrypoint.sh
-}
+unset WAYLAND_DISPLAY XDG_SESSION_TYPE # VScode sets these, x11vnc silently exits in entrypoint.sh
+
+# override hostname to write localhost instead of what was configured by base container
+hostname() { [ "$1" = "-i" ] && echo "localhost" || command hostname "$@"; }
+export -f hostname
+
+cd /
+./entrypoint.sh
