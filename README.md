@@ -56,6 +56,11 @@ To run URSim, run these commands in the terminal:
 ```$ ./startURSim.sh```  
 Simulator will be available at (http://localhost:6080/vnc.html?host=localhost&port=6080).
 
+#### Shared folder
+The ```ursim_sharedspace/``` folder in the repository root is linked into every one of URSim's program folders, so it shows up as ```sharedspace/``` in PolyScope's file browser whichever robot model the simulator boots as. Use it as a drop box for moving files in and out of the simulator: programs, installation files, or URCap .jar files to install from PolyScope. Because it lives in the repository instead of the container, its contents survive a container rebuild, and it is referenced in the .gitignore file so they are not tracked by git.
+
+The links are created by ```.devcontainer/link-ursim-sharedspace.sh```, which runs automatically every time the container starts.
+
 
 
 

@@ -26,6 +26,6 @@
 				"yzhang.markdown-all-in-one"]
 			}
 		},
-		"postStartCommand": "chmod +x newURCap.sh && chmod +x startURSim.sh"
+		"postStartCommand": "chmod +x newURCap.sh startURSim.sh .devcontainer/link-ursim-sharedspace.sh && bash .devcontainer/link-ursim-sharedspace.sh"
 }
 
